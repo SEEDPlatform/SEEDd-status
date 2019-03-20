@@ -42,16 +42,16 @@ node default {
     rpcuser                   => 'status',
     testnet                   => true,
     disablewallet             => true,
-    download_bitcoind_version => '0.16.0'
+    download_SEEDd_version => '0.16.0'
   }
 
-  cron { 'bitcoind_stats':
+  cron { 'SEEDd_stats':
     command => '/usr/bin/curl -Ssk http://127.0.0.1/stats.php > /dev/null',
     user    => 'root',
     minute  => '*/5',
   }
 
-  cron { 'bitcoind_peer_stats':
+  cron { 'SEEDd_peer_stats':
     command => '/usr/bin/curl -Ssk http://127.0.0.1/peercount.php > /dev/null',
     user    => 'root',
     minute  => '*/5',

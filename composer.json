@@ -1,5 +1,29 @@
 {
+    "name": "seedplatform/seedd-status",
+    "description": "Coveralls library API",
+    "keywords": ["coverage", "github", "test", "ci"],
+    "homepage": "https://github.com/SEEDPlatform/SEEDd-status",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SEED Project",
+            "email": "info@seednetwork.io",
+            "homepage": "https://seednetwork.io",
+            "role": "Developer"
+        }
+    ],
     "require-dev": {
         "squizlabs/php_codesniffer": "2.*"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "process-timeout": 0,
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "master": "1.0.0"
+        }
     }
 }

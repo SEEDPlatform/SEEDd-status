@@ -3,10 +3,12 @@
  * Bitcoin Status Page
  *
  * @category File
- * @package  BitcoinStatus
+ * @package  BitcoinStatus_SEEDStatus
  * @author   Craig Watson <craig@cwatson.org>
+ * @author   SEED Project <info@seednetwork.io>
  * @license  https://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
  * @link     https://github.com/craigwatson/bitcoind-status
+ * @link     https://github.com/SEEDPlatform/SEEDd-status
  */
 
 $config = array(
@@ -32,10 +34,10 @@ $config = array(
 
   // Cache
   'cache_geo_data'            => true,
-  'geo_cache_file'            => '/var/tmp/bitcoind-geolocation.cache',
+  'geo_cache_file'            => '/var/tmp/SEEDd-geolocation.cache',
   'geo_cache_time'            => 604800,
   'use_cache'                 => false,
-  'cache_file'                => '/var/tmp/bitcoind-status.cache',
+  'cache_file'                => '/var/tmp/SEEDd-status.cache',
   'max_cache_time'            => 300,
   'nocache_whitelist'         => array('127.0.0.1'),
 
@@ -50,7 +52,7 @@ $config = array(
   'display_version'           => true,
   'display_github_ribbon'     => false,
   'display_max_height'        => true,
-  'use_bitcoind_ip'           => false,
+  'use_SEEDd_ip'           => false,
   'intro_text'                => 'not_set',
   'title_text'                => 'Bitcoin Node Status',
   'display_bitnodes_info'     => false,
@@ -60,20 +62,20 @@ $config = array(
 
   // Stats
   'stats_whitelist'           => array('127.0.0.1'),
-  'stats_file'                => '/var/tmp/bitcoind-status.data',
+  'stats_file'                => '/var/tmp/SEEDd-status.data',
   'stats_max_age'             => '604800',
   'stats_min_data_points'     => 5,
 
   // Node Count
   'peercount_whitelist'       => array('127.0.0.1'),
-  'peercount_file'            => '/var/tmp/bitcoind-peers.data',
+  'peercount_file'            => '/var/tmp/SEEDd-peers.data',
   'peercount_max_age'         => '2592000',
   'peercount_min_data_points' => 5,
   'peercount_extra_nodes'     => array(),
 
   // Uptime
-  'display_bitcoind_uptime'   => false,
-  'bitcoind_process_name'     => 'bitcoind',
+  'display_SEEDd_uptime'   => false,
+  'SEEDd_process_name'     => 'bitcoind',
 
   // System
   'date_format'               => 'H:i:s T, j F Y ',
