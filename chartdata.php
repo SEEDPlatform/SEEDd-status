@@ -1,14 +1,15 @@
 <?php
 /**
- * Bitcoin Status Page - Stats
+ * SEED Status Page
  *
  * @category File
- * @package  BitcoinStatus
+ * @package  SEEDStatus
  * @author   Craig Watson <craig@cwatson.org>
+ * @author   SEED Project <info@seednetwork.io>
  * @license  https://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
  * @link     https://github.com/craigwatson/bitcoind-status
+ * @link     https://github.com/SEEDPlatform/SEEDd-status
  */
-
 
 if (!isset($_GET['stat'])) {
     die('Need to pass stat');

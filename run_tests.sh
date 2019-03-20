@@ -1,3 +1,14 @@
+
+ # SEED Node Status Copyright (C) 2019
+ #
+ # File Test script for PHP errors and PEAR standards
+ # Craig Watson <craig@cwatson.org>
+ # SEED Project <info@seednetwork.io>
+ # https://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
+ # https://github.com/craigwatson/bitcoind-status
+ # https://github.com/SEEDPlatform/SEEDd-status
+
+
 #!/bin/bash
 
 composer update

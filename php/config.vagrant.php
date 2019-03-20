@@ -1,9 +1,9 @@
 <?php
 /**
- * Bitcoin Status Page
+ * SEED Status Page
  *
  * @category File
- * @package  BitcoinStatus_SEEDStatus
+ * @package  SEEDStatus
  * @author   Craig Watson <craig@cwatson.org>
  * @author   SEED Project <info@seednetwork.io>
  * @license  https://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
