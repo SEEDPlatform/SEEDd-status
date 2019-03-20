@@ -1,6 +1,5 @@
 sudo: required
 dist: xenial
-
 language: php
 php:
   - 5.6
@@ -8,28 +7,23 @@ php:
   - 7.1
   - 7.2
   - nightly
-
 cache:
     directories:
         - $HOME/.composer/cache
-
-install:
+before_install:
         - wget https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh -O fossa/install.sh
-        - chmod +x fossa/install.sh && sudo fossa/install.sh 
         - wget https://raw.githubusercontent.com/composer/getcomposer.org/76a7060ccb93902cd7576b67264ad91c8a2700e2/web/installer -O - -q | php --
+install:
+        - chmod +x fossa/install.sh && sudo fossa/install.sh 
         - sudo mv -v composer.phar /usr/local/bin/composer
-
 before_script: 
         - composer self-update
-
 script: 
         - ./run_tests.sh
         - FOSSA_API_KEY=e66765cf5562f8a80346914024c7fa26 fossa
-
 notifications:
   webhooks: 
-      urls:
+  urls:
         - https://app.fossa.com/hooks/travisci
   email:
         - info@seednetwork.io
-
