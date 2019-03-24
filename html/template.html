@@ -11,12 +11,17 @@
 -->
 
 <!DOCTYPE html>
+<?php
+$page = $_SERVER['PHP_SELF'];
+$sec = "120";
+?>
 <html>
 <head>
   <title><?php echo isset($config['title_text']) ? $config['title_text'] : $default_app_title; ?></title>
   <link rel="icon" type="image/ico" href="img/favicon.ico" />
   <link rel="stylesheet" href="css/pure-min.css">
   <link rel="stylesheet" href="css/flags.css">
+  <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <!--[if lte IE 8]>
@@ -135,7 +140,7 @@
       <p class="stat"><span class="label">Network Height:</span> <?php echo $data['max_height']; ?></p>
 <?php } ?>
 <?php if (isset($data['proof-of-work'])) { ?>
-      <p class="stat"><span class="label">Difficulty:</span> <?php echo number_format($data['proof-of-work'],3);?> POW </p>
+      <p class="stat"><span class="label">Difficulty:</span> <?php echo number_format($data['proof-of-work'],3); ?> POW </p>
 <?php } ?>
 <?php if (isset($data['proof-of-stake'])) { ?>
       <p class="stat"><span class="label">Difficulty:</span> <?php echo number_format($data['proof-of-stake'],3); ?> POS </p>
@@ -159,7 +164,7 @@
       <p class="stat"><span class="label">Free Disk Space:</span> <?php echo $data['free_disk_space']; ?></p>
 <?php } ?>
 <?php if (isset($data['cache_time']) & $config['use_cache'] === TRUE) { ?>
-      <p class="stat"><span class="label">Last Updated:</span> <?php echo date($config['date_format'], $data['cache_time']); ?> (refreshes every <?php echo ($config['max_cache_time']/60); ?> minutes, next at <?php echo date('H:i:s',$data['cache_expiry']) ?>)</p>
+      <p class="stat"><span class="label">Last Updated:</span> <?php echo date($config['date_format'], $data['cache_time']); ?> (refreshes every <?php echo ($config['max_cache_time']/60); ?> minutes, next at <?php echo date('H:i:s',$data['cache_expiry']) ?> UTC )</p>
 <?php } ?>
 <?php if (isset($data['peers']) & $config['display_peer_info'] === TRUE) { ?>
   </div>
